@@ -1,0 +1,13 @@
+document.getElementById('courseForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const courseName = document.getElementById('courseName').value;
+    addCourse(courseName);
+});
+
+function addCourse(courseName) {
+    // Itt lehetne egy AJAX hívást végezni a backend felé
+    const li = document.createElement('li');
+    li.textContent = courseName;
+    document.getElementById('courseList').appendChild(li);
+}
